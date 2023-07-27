@@ -1,0 +1,21 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avsaryagmur/PlaywrightAutomation.git"
+  },
+  "keywords": [],
+  "author": "yagmuravsardilmit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avsaryagmur/PlaywrightAutomation/issues"
+  },
+  "homepage": "https://github.com/avsaryagmur/PlaywrightAutomation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  }
+}
