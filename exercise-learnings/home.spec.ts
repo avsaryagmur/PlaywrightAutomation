@@ -81,6 +81,83 @@ test.describe('Home', () => {
             
           })
 
+          //Multiple elements
+          test('Verify text of all nav links', async ({ page }) => {
+        
+            const expectedNavLinks = [
+                "Home",
+                "About",
+                "Shop",
+                "Blog",
+                "Contact",
+                "My account",
+            ];
+
+            await page.goto("https://practice.automationbro.com/");
+       
+
+            //find the nav link texts
+            const navLinks =  await page.locator('#zak-primary-menu li[id*=menu]'); // it will find multiple elements
+               
+           //verify nav links texts
+            expect(await navLinks.allTextContents()).toEqual(expectedNavLinks); //Note: toEqual is not a promise, so i deleted the await 
+
+            expect(await navLinks.count()).toEqual(6);
+
+         })
+
+         //Multiple elements // nth locator
+          test('Verify text of specific nav link using the nth locator', async ({ page }) => {
+        
+            const expectedNavLinks = [
+                "Home",
+                "About",
+                "Shop",
+                "Blog",
+                "Contact",
+                "My account",
+            ];
+
+            await page.goto("https://practice.automationbro.com/");
+       
+
+            //find the nav link texts
+            const specificNavLink =  await page.locator('#zak-primary-menu li[id*=menu]').nth(3); // it will find element by index // also you can use first() , last()
+               
+           //verify nav links texts
+            expect(await specificNavLink.textContent()).toEqual(expectedNavLinks[3]); //Note: toEqual is not a promise, so i deleted the await 
+
+
+         })
+
+
+         test('Print out all the list with using loop', async ({ page }) => {
+        
+            const expectedNavLinks = [
+                "Home",
+                "About",
+                "Shop",
+                "Blog",
+                "Contact",
+                "My account",
+            ];
+
+            await page.goto("https://practice.automationbro.com/");
+       
+
+            //find the nav link texts
+            const navLink =   page.locator('#zak-primary-menu li[id*=menu]');
+
+            //print out all the list
+            for (const el of await navLink.elementHandles()) { // elementHandles returns promise, thats why we add await
+                console.log(await el.textContent());
+                
+            }             
+
+
+         })
+
+
 
 
     
