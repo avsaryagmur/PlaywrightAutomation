@@ -36,7 +36,32 @@ test.describe('Challange 1', () => {
 
         
     })
+})
+
+test.describe('Challange 2', () => {
     
+    test('Blog Excercise', async ({ page }) => {
+    /*
+    Access Blog page
+    Get the length of recentPosts posts
+    Expect min char lenght of each individual post item should be > 10
+    */
+    const blogMenu = await page.locator('#zak-primary-nav >> text=blog');
+
+    await page.goto("https://practice.automationbro.com/");
+
+    await blogMenu.click();
+    await expect(page).toHaveURL(/.*blog/);
+
+    const recentPosts = await page.locator('#recent-posts-3 li');
+
+    const lenghtOfRecentPosts =  await recentPosts.count();
+    console.log(lenghtOfRecentPosts);
     
+
+
+
+    })
     
 })
+
