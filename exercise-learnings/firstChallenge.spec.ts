@@ -33,6 +33,8 @@ test.describe('Challange 1', () => {
 
         await expect( successMsg).toBeVisible();
         expect(await successMsg.textContent()).toContain(successMsgText);
+        //or
+        await expect(successMsg).toHaveText(successMsgText);
 
         
     })
@@ -53,12 +55,20 @@ test.describe('Challange 2', () => {
     await blogMenu.click();
     await expect(page).toHaveURL(/.*blog/);
 
-    const recentPosts = await page.locator('#recent-posts-3 li');
+    const recentPosts = await page.locator('#recent-posts-3 ul li');
 
     const lenghtOfRecentPosts =  await recentPosts.count();
-    console.log(lenghtOfRecentPosts);
-    
 
+    //assert the total list count is 5
+    expect(lenghtOfRecentPosts).toEqual(5);
+
+    
+    //loop through the list and assett the chr lenght >10
+    for (const el of await recentPosts.elementHandles()) {
+    
+        console.log( (await el.textContent()).length);
+      expect((await el.textContent()).trim().length).toBeGreaterThan(10);
+    }
 
 
     })
