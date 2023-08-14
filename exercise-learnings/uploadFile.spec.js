@@ -27,7 +27,7 @@ test.describe('Upload Files', () => {
         
         
         // assertion
-        expect(await successMessage.textContent()).toContain('uploadeqd successfully');
+        expect(await successMessage.textContent()).toContain('uploaded successfully');
 
 
 
