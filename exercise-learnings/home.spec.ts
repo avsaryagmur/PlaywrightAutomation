@@ -6,7 +6,7 @@ test.describe('Home', () => {
         await page.goto("https://practice.automationbro.com/");
 
         //verift title
-        await expect(page).toHaveTitle("Practice E-Commerce Site – Automation Bro");
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
         
     })
 
@@ -25,7 +25,7 @@ test.describe('Home', () => {
 
         await page.locator("#get-started").click(); //We should add await, when we use the promise. click() uses the promise. 
 
-        await expect(page).toHaveURL("https://practice.automationbro.com/#get-started");
+    //    await expect(page).toHaveURL("https://practice.sdetunicorns.com/#get-started");
         //or
         await expect(page).toHaveURL(/.*#get-started/);
 

@@ -10,14 +10,14 @@ test.describe(' Assertions', () => {
     test('Soft Assertion', async ({ page }) => {
         await page.goto("https://practice.automationbro.com/");
 
-        await expect(page).toHaveTitle("Practice E-Commerce Site – Automation Bro");
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
 
         await page.locator("#get-started").click(); 
 
         //SOFT ASSERTION
         await expect.soft(page).toHaveTitle("This text will be failed, but thanks to .soft, the all test will run then it will take fail after that.");
 
-        await expect(page).toHaveURL("https://practice.automationbro.com/#get-started");
+        await expect(page).toHaveURL("https://practice.sdetunicorns.com/#get-started");
         //or
         await expect(page).toHaveURL(/.*#get-started/);
         
