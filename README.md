@@ -23,3 +23,10 @@ Auto generate tests with Codegen:
 ## We suggest that you begin by typing:
    `npx playwright test`
 
+## Debug 
+Debug in Console
+
+`DEBUG=pw:api basic_test_command`
+
+`DEBUG=pw:api npx playwright test home.spec.ts -g "Open\s+About\s+Page\s+and\s+verify\s+title$"`
+
