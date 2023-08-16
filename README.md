@@ -24,9 +24,24 @@ Auto generate tests with Codegen:
    `npx playwright test`
 
 ## Debug 
-Debug in Console
+* __Debug in Console__
 
 `DEBUG=pw:api basic_test_command`
 
 `DEBUG=pw:api npx playwright test home.spec.ts -g "Open\s+About\s+Page\s+and\s+verify\s+title$"`
 
+
+* __Debug with Trace Viewer__
+1. Open pkaywright.cnfig.ts file
+2. Use  "trace: 'on'," command instead of "trace: 'on-first-retry'," 
+3. Run test with "Execute Playwright Tests" extention
+trace on will work for each particular tests
+Also, it will open the report automatically and you will find a Trace section below.
+
+* __Debug with Inspector__
+It will open a playwright inspector and you can debug it by clicking the next step button. So it gives an opportunity to watch line's step by step
+
+`PWDEBUG=1 basic_test_command`
+
+
+`PWDEBUG=1 npx playwright test assertions.spec.ts -g "Avoid\s+running\s+further\s+if\s+there\s+were\s+soft\s+assertion\s+failures$"`
