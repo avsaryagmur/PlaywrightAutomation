@@ -11,8 +11,12 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './exercise-learnings',
+  /* Maximum time one test cab run */
   timeout: 30 * 1000,
   expect: {
+    /**
+    * Maximum time expect() should wait for the condition to be
+    * */
     timeout: 5000
   },
   /* Run tests in files in parallel */
