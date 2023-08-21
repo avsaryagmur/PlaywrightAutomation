@@ -1,12 +1,14 @@
+import {Page, Locator} from '@playwright/test'; //Enable the Auto Suggestion for PageObjects
+
 class HomePage{
 
     //in TypeScript we have to specifically declare
-    page: any;
-    getStartedButton: any;
-    headingText: any;
-    homeText: any;
-    searchIcon: any;
-    navLinks: any;
+    page: Page;
+    getStartedButton: Locator;
+    headingText: Locator;
+    homeText: Locator; 
+    searchIcon: Locator;
+    navLinks: Locator;
     constructor(page){
         this.page = page; // we need to access page property
         this.getStartedButton = page.locator("#get-started");
