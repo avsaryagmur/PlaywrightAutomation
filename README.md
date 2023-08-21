@@ -52,5 +52,8 @@ It will open a playwright inspector and you can debug it by clicking the next st
 <img width="1250" alt="image" src="https://github.com/avsaryagmur/PlaywrightAutomation/assets/60423117/216dbc99-c0d6-490b-8c7b-ae1518cf926a">
 
 * __Debug with Record__
+Put ` await page.pause(); ` to your code and debug with inspector
+
+
 ![image](https://github.com/avsaryagmur/PlaywrightAutomation/assets/60423117/4fcfb793-8e6e-4fa8-aecb-abceb1c410ef)
 

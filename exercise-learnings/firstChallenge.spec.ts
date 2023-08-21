@@ -24,6 +24,8 @@ test.describe('Challange 1', () => {
         await contactMenu.click();
          await expect(page).toHaveURL(/.*contact/);
 
+        //await page.pause(); ADDED FOR DEBUGGING 
+
         await nameField.fill('test test');
         await emailField.fill('test@gmail.com');
         await phoneField.fill('+49123456789');
