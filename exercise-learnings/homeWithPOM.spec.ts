@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import HomePage  from '../pages/home.page';
 
 test.describe('Home', () => {
-    let homePage: HomePage;  // create a new variable & it has a type of the HomePage class
+    let homePage: HomePage;  // create a new variable & homePage has a type of the HomePage class
 
     test('Open Home and verify title', async ({ page }) => {
         homePage = new HomePage(page); //initiale the homePage
