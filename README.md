@@ -23,6 +23,17 @@ Auto-generate tests with Codegen:
 ## We suggest that you begin by typing:
    `npx playwright test`
 
+## Install Extension
+
+Playwright Test for VSCode
+
+Playwright Test Snippets
+
+Playwright Runner
+
+Playwright Trace Viewer for VSCode
+
+
 ## Debug 
 * __Debug in Console__
 
@@ -50,6 +61,7 @@ It will open a playwright inspector and you can debug it by clicking the next st
 `PWDEBUG=1 npx playwright test assertions.spec.ts -g "Avoid\s+running\s+further\s+if\s+there\s+were\s+soft\s+assertion\s+failures$"`
 
 <img width="1250" alt="image" src="https://github.com/avsaryagmur/PlaywrightAutomation/assets/60423117/216dbc99-c0d6-490b-8c7b-ae1518cf926a">
+
 
 * __Debug with Record__
 Put ` await page.pause(); ` to your code and debug with inspector
