@@ -19,6 +19,17 @@ class HomePage{
 
     }
 
+    async  navigate() {
+        await this.page.goto("https://practice.automationbro.com/");
+
+    }
+
+     getNavLinkText() {
+  //Actually,we do not have to add async because when we do return, it will simply return the promise.
+        return this.navLinks.allInnerTexts();
+
+    }
+
 }
 
 export default HomePage; // we need to use this file in another file

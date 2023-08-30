@@ -77,13 +77,16 @@ test.describe('Home', () => {
                     "My account",
                 ];
     
-                await page.goto("https://practice.automationbro.com/");
-           
+                await homePage.navigate();
                        
                //verify nav links texts
-                expect(await homePage.navLinks.allTextContents()).toEqual(expectedNavLinks); //Note: toEqual is not a promise, so i deleted the await 
+              //  expect(await homePage.navLinks.allTextContents()).toEqual(expectedNavLinks); //Note: toEqual is not a promise, so i deleted the await 
+
+              expect(await homePage.getNavLinkText()).toEqual(expectedNavLinks);
+
     
-                expect(await homePage.navLinks.count()).toEqual(6);
+             expect(await homePage.navLinks.count()).toEqual(6);
+
     
              })
     
