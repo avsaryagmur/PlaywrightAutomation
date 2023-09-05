@@ -52,6 +52,20 @@ class ContactPage{
    
          }
 
+
+         async submitForm(name:string, email:string, phone: string, message: string){
+            await this.nameField.fill(name);
+            await this.emailField.fill(email);
+            await this.phoneField.fill(phone);
+            await this.messageField.fill(message);
+            // eslint-disable-next-line playwright/no-wait-for-timeout
+            await this.page.waitForTimeout(3000);
+
+            await this.submitButton.click();
+   
+         }
+
+
 }
 
 export default ContactPage;

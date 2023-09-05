@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test';
 import ContactPage from '../pages/contact.page';
 import BlogPage from '../pages/blog.page';
 
+import { faker } from '@faker-js/faker';
+
 test.describe('Challange 1', () => {
     let contactPage: ContactPage;
 
@@ -20,6 +22,35 @@ test.describe('Challange 1', () => {
          await expect(page).toHaveURL(/.*contact/);
 
          await contactPage.fillTextAndSendMessage();
+
+
+
+        await expect( contactPage.successMsg).toBeVisible();
+
+        expect (await contactPage.successMsg.textContent()).toContain(contactPage.successMsgText);
+
+        await expect(contactPage.successMsg).toHaveText(contactPage.successMsgText);
+
+        
+    })
+
+
+
+    test('Contact Exercise with Random Values', async ({ page }) => {
+        contactPage = new ContactPage(page);
+        /*
+        Access Contact page
+        Fill The form
+        Submit the form
+        Assert the success message
+        */
+
+        await contactPage.navigate();
+        
+        await contactPage.contactMenu.click();
+         await expect(page).toHaveURL(/.*contact/);
+
+         await contactPage.submitForm(faker.person.fullName(), faker.internet.email(),faker.phone.number('+48 91 ### ## ##'), faker.lorem.paragraph(2) );
 
 
 
