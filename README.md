@@ -69,3 +69,17 @@ Put ` await page.pause(); ` to your code and debug with inspector
 
 ![image](https://github.com/avsaryagmur/PlaywrightAutomation/assets/60423117/4fcfb793-8e6e-4fa8-aecb-abceb1c410ef)
 
+
+## ESlint Implementation
+
+`npm install eslint --save-dev`
+
+`npm i eslint-plugin-playwright --save-dev`
+
+`npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev`
+
+Then install VS Code ESLint extension
+
+Create .eslintrc ( /Users/y.avsar/PlaywrightAutomation/.eslintrc ) file 
+
+`npx eslint exercise-learnings/` will show all warnings and errors in my code

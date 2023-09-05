@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import CardPage from '../pages/card.page';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');  //nodejs path package
 
 test.describe('Upload Files - POM - COMPONENT', () => {

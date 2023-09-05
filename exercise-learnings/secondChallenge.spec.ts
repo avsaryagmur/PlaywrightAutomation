@@ -51,7 +51,6 @@ test.describe('Challange 2', () => {
 
     expect(await blogPage.findlenghtOfRecentPosts()).toEqual(5);
 
-    
     //loop through the list and assett the chr lenght >10
     for (const el of await blogPage.recentPosts.elementHandles()) {
     
