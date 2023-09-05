@@ -50,7 +50,7 @@ test.describe('Upload Files', () => {
         await page.goto('https://practice.automationbro.com/cart/');
 
         // provide test file path
-        const filePath = path.join(__dirname , '../data/testFile.txt');
+        const filePath = path.join(__dirname , '../data/testImage.png');
 
 
         // DOM Manupulatiion
