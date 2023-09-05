@@ -14,7 +14,7 @@ class BlogPage{
     }
 
     async navigate(){
-        await this.page.goto("https://practice.automationbro.com/");
+        await this.page.goto("/");
     }
 
      findlenghtOfRecentPosts(){

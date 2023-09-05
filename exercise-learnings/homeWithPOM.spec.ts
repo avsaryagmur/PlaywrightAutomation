@@ -8,7 +8,8 @@ test.describe('Home', () => {
         homePage = new HomePage(page); //initiale the homePage
 
         //Open the URL
-        await page.goto("https://practice.automationbro.com/");
+         await homePage.navigate();
+
 
         //verift title
         await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
@@ -20,7 +21,8 @@ test.describe('Home', () => {
         test('Click get started button using CSS Selector', async ({ page }) => {
             homePage = new HomePage(page); //initiale the homePage
 
-            await page.goto("https://practice.automationbro.com/");
+        await homePage.navigate();
+
     
             //await page.locator("#get-started").click(); 
             await homePage.getStartedButton.click();
@@ -33,7 +35,8 @@ test.describe('Home', () => {
             homePage = new HomePage(page); //initiale the homePage
 
         
-            await page.goto("https://practice.automationbro.com/");
+        await homePage.navigate();
+
     
             await homePage.headingText.click(); 
         
@@ -46,7 +49,8 @@ test.describe('Home', () => {
            test('Verify home link is enabled using text and css selector', async ({ page }) => {
             homePage = new HomePage(page); //initiale the homePage
             
-            await page.goto("https://practice.automationbro.com/");
+        await homePage.navigate();
+
             
             //verify the homeText is enabled
            await expect(homePage.homeText).toBeEnabled();
@@ -57,7 +61,8 @@ test.describe('Home', () => {
              test('Verify search icon is visible using Xpath selector', async ({ page }) => {
                 homePage = new HomePage(page); //initiale the homePage
 
-                 await page.goto("https://practice.automationbro.com/");
+             await homePage.navigate();
+
                                 
                     //verify the homeText is enabled
                  await expect(homePage.searchIcon).toBeVisible();
@@ -103,7 +108,8 @@ test.describe('Home', () => {
                     "My account",
                 ];
     
-                await page.goto("https://practice.automationbro.com/");
+            await homePage.navigate();
+
            
     
                 //find the nav link texts

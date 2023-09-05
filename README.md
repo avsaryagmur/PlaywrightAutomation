@@ -80,6 +80,6 @@ Put ` await page.pause(); ` to your code and debug with inspector
 
 Then install VS Code ESLint extension
 
-Create .eslintrc ( /Users/y.avsar/PlaywrightAutomation/.eslintrc ) file 
+Create .eslintrc ( /../../PlaywrightAutomation/.eslintrc ) file 
 
 `npx eslint exercise-learnings/` will show all warnings and errors in my code

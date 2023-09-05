@@ -36,7 +36,7 @@ class ContactPage{
     }
 
     async  navigate() {
-        await this.page.goto('https://practice.automationbro.com/cart/');
+        await this.page.goto('/cart/');
     
     }
 
@@ -45,6 +45,7 @@ class ContactPage{
             await this.emailField.fill(this.fillEmail);
             await this.phoneField.fill(this.fillPhone);
             await this.messageField.fill(this.fillMessage);
+            // eslint-disable-next-line playwright/no-wait-for-timeout
             await this.page.waitForTimeout(3000);
 
             await this.submitButton.click();
