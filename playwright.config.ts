@@ -30,6 +30,11 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+
+  /* ../../PlaywrightAutomation/utils/global-setup.ts  */
+   globalSetup: require.resolve('./utils/global-setup'),
+
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
      baseURL: 'https://practice.automationbro.com',
@@ -37,6 +42,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    //trace: 'on-first-retry',  it is default command for playwright
    trace: 'on',  //for each particular tests
+
+   storageState: 'loggedInState.json'
   },
 
   /* Configure projects for major browsers */

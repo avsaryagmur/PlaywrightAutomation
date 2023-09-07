@@ -83,3 +83,12 @@ Then install VS Code ESLint extension
 Create .eslintrc ( /../../PlaywrightAutomation/.eslintrc ) file 
 
 `npx eslint exercise-learnings/` will show all warnings and errors in my code
+
+
+## Use faker for random data
+ https://fakerjs.dev/guide/
+ https://fakerjs.dev/api/
+
+ `npm install @faker-js/faker --save-dev`
+
+ For Example: visit the  "secondChallenge.spec.ts" test file
