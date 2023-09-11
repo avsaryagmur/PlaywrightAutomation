@@ -5,8 +5,12 @@ async function globalSetup(config :FullConfig) {
     const browser = await chromium.launch(); 
     const page = await browser.newPage(); //open a browser and use a new page
 
-    //login 
+    
     await page.goto('https://practice.automationbro.com/my-account');
+    await page.context().storageState({ path: 'notLoggedInState.json'});  
+
+
+    //login 
     await page.locator('#username').fill('Playwright Test');
     await page.locator('#password').fill('yagmur12345678');
     await page.locator(`button[value='Log in']`).click();

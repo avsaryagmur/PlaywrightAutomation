@@ -1,6 +1,7 @@
 import { test, expect, Page } from "@playwright/test";
 
 test.describe('My Account - Authentication - BEFORE EACH', () => {
+//test.use({storageState: 'notLoggedInState.json'})
 
     test.beforeEach(async ({ page }) => {
         await page.goto('/my-account');
@@ -28,7 +29,9 @@ test.describe('My Account - Authentication - BEFORE EACH', () => {
 })
 
 
-test.describe.serial('My Account - Authentication - BEFORE ALL', () => {
+test.describe.serial('My Account - Authentication - BEFORE ALL - SERIAL', () => {
+    //test.use({storageState: 'notLoggedInState.json'})
+
 
    // we can not run before all in parallel, because it will login one and it is not usable in two browser.
    // so we will run test one after the other (serilized)
@@ -57,6 +60,33 @@ test.describe.serial('My Account - Authentication - BEFORE ALL', () => {
     })
 
     test('Access Orders', async () => {
+        await page.locator(`li a[href*= 'orders']`).click();
+        await expect(page).toHaveURL(/.*orders/);
+             
+    })
+    
+    
+})
+
+
+test.describe('SIGNED-IN-STATE USE LOGIN IN global-setup.ts', () => {
+
+    test.use({storageState: 'loggedInState.json'})
+
+
+    // already logged in with using the loggedInState
+
+    test('Access Download', async ({ page }) => {
+        await page.goto('/my-account');
+
+        await page.locator(`li a[href*= 'downloads']`).click();
+        await expect(page).toHaveURL(/.*downloads/);
+             
+    })
+
+    test('Access Orders', async ({ page }) => {
+        await page.goto('/my-account');
+
         await page.locator(`li a[href*= 'orders']`).click();
         await expect(page).toHaveURL(/.*orders/);
              

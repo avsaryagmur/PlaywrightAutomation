@@ -43,7 +43,9 @@ export default defineConfig({
    //trace: 'on-first-retry',  it is default command for playwright
    trace: 'on',  //for each particular tests
 
-   storageState: 'loggedInState.json'
+
+   //default 
+   storageState: 'notLoggedInState.json'
   },
 
   /* Configure projects for major browsers */
