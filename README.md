@@ -79,6 +79,47 @@ Put ` await page.pause(); ` to your code and debug with inspector
 ![image](https://github.com/avsaryagmur/PlaywrightAutomation/assets/60423117/4fcfb793-8e6e-4fa8-aecb-abceb1c410ef)
 
 
+## Use faker for random data
+ https://fakerjs.dev/guide/
+ https://fakerjs.dev/api/
+
+ `npm install @faker-js/faker --save-dev`
+
+ For Example: visit the  "secondChallenge.spec.ts" test file
+
+
+## Reporters
+1. List Reporter
+
+`npx playwright test exercise-learnings/secondChallenge.spec.ts --reporter=list`
+
+2. Line Reporter
+
+`npx playwright test exercise-learnings/secondChallenge.spec.ts --reporter=line`
+
+3. html Reporter
+
+`npx playwright test exercise-learnings/secondChallenge.spec.ts --reporter=html`
+
+4. Dot Reporter
+
+`npx playwright test exercise-learnings/secondChallenge.spec.ts --reporter=dot`
+
+5. json Reporter
+
+`npx playwright test exercise-learnings/secondChallenge.spec.ts --reporter=json`
+
+6. Allure Reporter
+
+`npm i -D @playwright/test allure-playwright`
+
+`npm i -D allure-commandline`
+
+`npx allure generate allure-results --clean && npx allure open`
+
+
+
+
 ## ESlint Implementation
 
 `npm install eslint --save-dev`
@@ -92,12 +133,3 @@ Then install VS Code ESLint extension
 Create .eslintrc ( /../../PlaywrightAutomation/.eslintrc ) file 
 
 `npx eslint exercise-learnings/` will show all warnings and errors in my code
-
-
-## Use faker for random data
- https://fakerjs.dev/guide/
- https://fakerjs.dev/api/
-
- `npm install @faker-js/faker --save-dev`
-
- For Example: visit the  "secondChallenge.spec.ts" test file
