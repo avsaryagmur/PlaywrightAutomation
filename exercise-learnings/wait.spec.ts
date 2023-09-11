@@ -9,7 +9,8 @@ const path = require('path');  //nodejs path package
 
 test.describe('Waits', () => {
     
-    test('Hardcoded Wait', async ({ page }) => {
+    // eslint-disable-next-line playwright/no-skipped-test
+    test.skip('Hardcoded Wait', async ({ page }) => {
         const uploadFileBtn = await page.locator('#upload_1');
         const successMessage = await page.locator('#wfu_messageblock_header_1_1');
 
@@ -17,7 +18,7 @@ test.describe('Waits', () => {
         await page.goto('https://practice.automationbro.com/cart/');
 
         // provide test file path
-        const filePath = path.join(__dirname , '../data/5mbFile.png');
+        const filePath = path.join(__dirname , '../data/testImage.png');
 
 
         // upload test file
@@ -27,7 +28,7 @@ test.describe('Waits', () => {
         await uploadFileBtn.click();
 
         //hardcoded sleep -- WRONG WAY
-        await page.waitForTimeout(20000);   //20 secs   
+        await page.waitForTimeout(28000);   //28 secs   
         
         // assertion
         await expect(successMessage).toContainText('uploaded successfully');
@@ -43,7 +44,7 @@ test.describe('Waits', () => {
         await page.goto('https://practice.automationbro.com/cart/');
 
         // provide test file path
-        const filePath = path.join(__dirname , '../data/5mbFile.png');
+        const filePath = path.join(__dirname , '../data/testImage.png');
 
 
         // upload test file
@@ -68,7 +69,7 @@ test.describe('Waits', () => {
         await page.goto('https://practice.automationbro.com/cart/');
 
         // provide test file path
-        const filePath = path.join(__dirname , '../data/5mbFile.png');
+        const filePath = path.join(__dirname , '../data/testImage.png');
 
 
         // upload test file

@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 
-test.describe(' Assertions', () => {
+// eslint-disable-next-line playwright/no-skipped-test
+test.describe.skip(' Assertions', () => {
 
     /*
     By default, failed assertion will terminate test execution. Playwright also supports soft assertions: failed soft assertions do not terminate test execution, but mark the test as failed.

@@ -20,6 +20,15 @@ Runs the tests in debug mode:
 Auto-generate tests with Codegen: 
   `npx playwright codegen`
 
+Runs the tests with specific workers number
+
+`npx playwright test exercise-learnings --workers 4` 
+
+If you set workers to 1. It will become serial instead of the paralel running, one after another.
+
+`npx playwright test exercise-learnings --workers 1` 
+
+
 ## We suggest that you begin by typing:
    `npx playwright test`
 
