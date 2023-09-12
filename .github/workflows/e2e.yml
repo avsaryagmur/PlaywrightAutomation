@@ -2,7 +2,7 @@ name: "Playwright E2E Tests"
 on: [push]
 jobs:
   test-e2e:
-   name: Run Playwriht E2E tests
+   name: Run Playwright E2E tests
    runs-on: ubuntu-20.04
    steps:
       - uses: actions/checkout@v3
