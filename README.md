@@ -5,6 +5,9 @@
 Runs the end-to-end tests:
   `npx playwright test`
 
+Run tests in headed browsers:
+  `npx playwright test --headed`
+
 Starts the interactive UI mode:
   `npx playwright test --ui`
 
