@@ -1,5 +1,9 @@
 name: "Playwright E2E Tests"
-on: [push]
+on: 
+  [push]
+  pull_request:
+  workflow_dispatch:
+
 jobs:
   test-e2e:
    name: Run Playwright E2E tests
@@ -15,3 +19,9 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run the tests
         run: npx playwright test exercise-learnings/home.spec.ts
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test Results
+          path: test-results
