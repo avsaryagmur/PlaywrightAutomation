@@ -136,3 +136,7 @@ Then install VS Code ESLint extension
 Create .eslintrc ( /../../PlaywrightAutomation/.eslintrc ) file 
 
 `npx eslint exercise-learnings/` will show all warnings and errors in my code
+
+
+## NOTE
+You can use https://trace.playwright.dev/ for opening trace.zip as a readable report
