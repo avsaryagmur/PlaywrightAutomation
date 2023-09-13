@@ -68,8 +68,8 @@ test.describe('Challange 2', () => {
     //loop through the list and assett the chr lenght >10
     for (const el of await recentPosts.elementHandles()) {
     
-        console.log( (await el.textContent()).length);
-      expect((await el.textContent()).trim().length).toBeGreaterThan(10);
+        console.log( (await el.textContent())!.length);
+      expect((await el.textContent())!.trim().length).toBeGreaterThan(10);
     }
 
 

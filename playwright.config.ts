@@ -28,8 +28,15 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
+  reporter: [['html'],['line'], ['allure-playwright' , {outputFolder: 'test-results'}]],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+
+  /* ../../PlaywrightAutomation/utils/global-setup.ts  */
+   globalSetup: require.resolve('./utils/global-setup'),
+
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
      baseURL: 'https://practice.automationbro.com',
@@ -37,6 +44,11 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    //trace: 'on-first-retry',  it is default command for playwright
    trace: 'on',  //for each particular tests
+  //trace: 'retain-on-failure', //only for fail situation
+
+
+   //default 
+   storageState: 'notLoggedInState.json'
   },
 
   /* Configure projects for major browsers */
@@ -44,7 +56,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
-      headless: false
+      headless: true
      },
     },
 

@@ -1,0 +1,25 @@
+name: "Playwright E2E Tests"
+on: [push]
+
+
+jobs:
+  test-e2e:
+   name: Run Playwright E2E tests
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '19'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Run the tests
+        run: npx playwright test exercise-learnings/home.spec.ts
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test Reports
+          path: test-results
