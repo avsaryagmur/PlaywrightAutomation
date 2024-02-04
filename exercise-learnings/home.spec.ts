@@ -1,9 +1,20 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Home', () => {
+
+    test('aaOpen Home and verify title', async ({ page }) => {
+        //Open the URL
+        await page.goto("https://www.google.com.tr/");
+
+        //verift title
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
+        
+    })
+
+
     test('Open Home and verify title', async ({ page }) => {
         //Open the URL
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         //verift title
         await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
@@ -12,7 +23,7 @@ test.describe('Home', () => {
 
     test('Open About Page and verify title', async ({ page }) => {
         
-        await page.goto("https://practice.automationbro.com/about");
+        await page.goto("https://practice.sdetunicorns.com/about");
 
         await expect(page).toHaveTitle("About – Practice E-Commerce Site");
 
@@ -21,7 +32,7 @@ test.describe('Home', () => {
     //CSS Selector
     test('Click get started button using CSS Selector', async ({ page }) => {
         
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         await page.locator("#get-started").click(); //We should add await, when we use the promise. click() uses the promise. 
 
@@ -34,7 +45,7 @@ test.describe('Home', () => {
      //Text Selector
      test('Verify heading text is visible using text selector', async ({ page }) => {
         
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         const headingText =  await page.locator('text=Think different. Make different.');
         await page.locator("#get-started").click(); //We should add await, when we use the promise. click() uses the promise. 
@@ -47,7 +58,7 @@ test.describe('Home', () => {
        //Text Selector and CSS Selector Together (>>)
        test('Verify home link is enabled using text and css selector', async ({ page }) => {
         
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         const homeText =  await page.locator('#zak-primary-nav >> text=Home'); // find #zak-primary-nav  then check Home Text inside it
     
@@ -60,7 +71,7 @@ test.describe('Home', () => {
          //CSS: matching by text
          test('Verify home link is enabled using CSS: matching by text', async ({ page }) => {
         
-            await page.goto("https://practice.automationbro.com/");
+            await page.goto("https://practice.sdetunicorns.com/");
     
             const homeText =  await page.locator('#zak-primary-nav:has-text("Home")');
             
@@ -72,7 +83,7 @@ test.describe('Home', () => {
          // Xpath selector
          test('Verify search icon is visible using Xpath selector', async ({ page }) => {
         
-             await page.goto("https://practice.automationbro.com/");
+             await page.goto("https://practice.sdetunicorns.com/");
         
              const searchIcon =  await page.locator("//div[@class='zak-header-actions zak-header-actions--desktop']//a[@class='zak-header-search__toggle']");
                 
@@ -93,7 +104,7 @@ test.describe('Home', () => {
                 "My account",
             ];
 
-            await page.goto("https://practice.automationbro.com/");
+            await page.goto("https://practice.sdetunicorns.com/");
        
 
             //find the nav link texts
@@ -118,7 +129,7 @@ test.describe('Home', () => {
                 "My account",
             ];
 
-            await page.goto("https://practice.automationbro.com/");
+            await page.goto("https://practice.sdetunicorns.com/");
        
 
             //find the nav link texts
@@ -142,7 +153,7 @@ test.describe('Home', () => {
                 "My account",
             ];
 
-            await page.goto("https://practice.automationbro.com/");
+            await page.goto("https://practice.sdetunicorns.com/");
        
 
             //find the nav link texts

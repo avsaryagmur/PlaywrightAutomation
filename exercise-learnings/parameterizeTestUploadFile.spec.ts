@@ -15,7 +15,7 @@ test.describe('Upload Files with Parameterize Test Approach', () => {
             const successMessage =  page.locator('#wfu_messageblock_header_1_1');
     
             // open URL
-            await page.goto('https://practice.automationbro.com/cart/');
+            await page.goto('https://practice.sdetunicorns.com/cart/');
     
             // provide test file path
             //create a new folder as data and put the file inside it

@@ -9,7 +9,7 @@ test.describe.skip(' Assertions', () => {
     It helps to you can make sure all the other steps are working.
     */
     test('Soft Assertion', async ({ page }) => {
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
 
@@ -27,7 +27,7 @@ test.describe.skip(' Assertions', () => {
     test('Avoid running further if there were soft assertion failures', async ({ page }) => {
       //NOTE: This text will take error - line 57
 
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         const contactMenu = await page.locator('#zak-primary-nav >> text=contact');
         const nameField = await page.locator('#evf-277-field_ys0GeZISRs-1');

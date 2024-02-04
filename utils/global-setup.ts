@@ -6,7 +6,7 @@ async function globalSetup(config :FullConfig) {
     const page = await browser.newPage(); //open a browser and use a new page
 
     
-    await page.goto('https://practice.automationbro.com/my-account');
+    await page.goto('https://practice.sdetunicorns.com/my-account');
     await page.context().storageState({ path: 'notLoggedInState.json'});  
 
 

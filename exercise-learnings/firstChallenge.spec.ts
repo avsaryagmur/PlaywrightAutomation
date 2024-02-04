@@ -10,7 +10,7 @@ test.describe('Challange 1', () => {
         Assert the success message
         */
 
-        await page.goto("https://practice.automationbro.com/");
+        await page.goto("https://practice.sdetunicorns.com/");
 
         const contactMenu = await page.locator('#zak-primary-nav >> text=contact');
         const nameField = await page.locator('#evf-277-field_ys0GeZISRs-1');
@@ -52,7 +52,7 @@ test.describe('Challange 2', () => {
     */
     const blogMenu = await page.locator('#zak-primary-nav >> text=blog');
 
-    await page.goto("https://practice.automationbro.com/");
+    await page.goto("https://practice.sdetunicorns.com/");
 
     await blogMenu.click();
     await expect(page).toHaveURL(/.*blog/);

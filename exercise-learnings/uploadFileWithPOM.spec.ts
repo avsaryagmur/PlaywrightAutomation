@@ -10,7 +10,7 @@ test.describe('Upload Files - POM - COMPONENT', () => {
          cardPage = new CardPage(page);
        
         // open URL
-        //await page.goto('https://practice.automationbro.com/cart/');
+        //await page.goto('https://practice.sdetunicorns.com/cart/');
         await cardPage.navigate();
 
         // provide test file path

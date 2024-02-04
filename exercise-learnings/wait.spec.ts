@@ -15,7 +15,7 @@ test.describe('Waits', () => {
         const successMessage = await page.locator('#wfu_messageblock_header_1_1');
 
         // open URL
-        await page.goto('https://practice.automationbro.com/cart/');
+        await page.goto('https://practice.sdetunicorns.com/cart/');
 
         // provide test file path
         const filePath = path.join(__dirname , '../data/testImage.png');
@@ -41,7 +41,7 @@ test.describe('Waits', () => {
         const successMessage = await page.locator('#wfu_messageblock_header_1_1');
 
         // open URL
-        await page.goto('https://practice.automationbro.com/cart/');
+        await page.goto('https://practice.sdetunicorns.com/cart/');
 
         // provide test file path
         const filePath = path.join(__dirname , '../data/testImage.png');
@@ -66,7 +66,7 @@ test.describe('Waits', () => {
         const successMessage = await page.locator('#wfu_messageblock_header_1_1');
 
         // open URL
-        await page.goto('https://practice.automationbro.com/cart/');
+        await page.goto('https://practice.sdetunicorns.com/cart/');
 
         // provide test file path
         const filePath = path.join(__dirname , '../data/testImage.png');
