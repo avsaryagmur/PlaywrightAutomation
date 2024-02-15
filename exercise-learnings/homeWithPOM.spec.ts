@@ -12,7 +12,7 @@ test.describe('Home', () => {
 
 
         //verift title
-        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns");
         
     })
 

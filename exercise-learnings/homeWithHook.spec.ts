@@ -33,7 +33,7 @@ test.describe('Home Test with HOOK', () => {
     test('Open Home and verify title', async ({ page }) => {
         
         //verift title
-        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns");
         
     })
 

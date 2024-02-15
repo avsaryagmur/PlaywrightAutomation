@@ -2,22 +2,13 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Home', () => {
 
-    test('aaOpen Home and verify title', async ({ page }) => {
-        //Open the URL
-        await page.goto("https://www.google.com.tr/");
-
-        //verift title
-        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
-        
-    })
-
 
     test('Open Home and verify title', async ({ page }) => {
         //Open the URL
         await page.goto("https://practice.sdetunicorns.com/");
 
         //verift title
-        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns – Helping you succeed in Software Quality.");
+        await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns");
         
     })
 
